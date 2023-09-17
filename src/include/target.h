@@ -28,7 +28,9 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
+#if !defined(_WIN32)
 #include <sys/types.h>
+#endif
 
 typedef struct target target_s;
 typedef uint32_t target_addr_t;

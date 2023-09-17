@@ -40,7 +40,9 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <inttypes.h>
+#if !defined(_WIN32)
 #include <sys/types.h>
+#endif
 
 #include "maths_utils.h"
 #include "timing.h"
