@@ -35,6 +35,12 @@ typedef uint32_t target_addr_t;
 typedef struct target_controller target_controller_s;
 
 #if PC_HOSTED == 1
+#if defined(_WIN32)
+#define WIN32_LEAN_AND_MEAN
+#include <winsock2.h>
+typedef signed long long ssize_t;
+typedef uint32_t mode_t;
+#endif
 bool bmda_swd_scan(uint32_t targetid);
 bool bmda_jtag_scan(void);
 #endif
