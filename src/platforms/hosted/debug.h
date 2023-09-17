@@ -41,7 +41,7 @@
 #include <stdint.h>
 #include <stdio.h>
 typedef const char *debug_str_t;
-#if defined(_WIN32) || defined(__CYGWIN__)
+#if defined(_WIN32) || defined(__CYGWIN__) || defined(_MSC_VER_)
 #define DEBUG_FORMAT_ATTR __attribute__((format(__MINGW_PRINTF_FORMAT, 1, 2)))
 #else
 #define DEBUG_FORMAT_ATTR __attribute__((format(printf, 1, 2)))
